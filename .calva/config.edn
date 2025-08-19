@@ -1,0 +1,5 @@
+{:project-root "/Users/giovanne.santos/Downloads/clojure-introducao-aula2"
+ :lein-profile "+dev"
+ :lein-args ["repl" ":headless"]
+ :repl-connect-timeout 30000
+ :repl-connect-retries 3}

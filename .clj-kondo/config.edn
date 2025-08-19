@@ -1,0 +1,8 @@
+{:lint-as {clojure.core.specs.alpha/def clojure.core/def
+           clojure.core.specs.alpha/defn clojure.core/defn}
+ :linters {:unused-namespace {:level :warning}
+           :unused-referred-var {:level :warning}
+           :unused-var {:level :warning}}}
+
+
+
