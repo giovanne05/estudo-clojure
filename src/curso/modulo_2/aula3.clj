@@ -2,6 +2,8 @@
   (:require
    [curso.mock_database :as db]))
 
+(def contas db/contas-bancarias)
+
 (println "====== Desafio: Sistema de Banco em Memória ======")
 
 (defn adicionar-nova-conta [contas nova-conta]
@@ -22,9 +24,9 @@
 
 (defn agrupar-contas-por-saldo [contas] (group-by :saldo contas))
 
-(println "Contas por tipo:" (agrupar-contas-por-tipo db/contas-bancarias))
-(println "Contas por saldo:" (agrupar-contas-por-saldo db/contas-bancarias))
-(println "Adicionar nova conta:" (adicionar-nova-conta (:contas db/contas-bancarias) {:numero "004" :titular "Ana" :saldo 1500 :tipo "corrente"}))
-(println "Buscar conta por número:" (buscar-conta-por-numero db/contas-bancarias "001"))
+(println "Contas por tipo:" (agrupar-contas-por-tipo contas))
+(println "Contas por saldo:" (agrupar-contas-por-saldo contas))
+(println "Adicionar nova conta:" (adicionar-nova-conta (:contas contas) {:numero "004" :titular "Ana" :saldo 1500 :tipo "corrente"}))
+(println "Buscar conta por número:" (buscar-conta-por-numero contas "001"))
 
 

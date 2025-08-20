@@ -1,11 +1,10 @@
-(ns curso.modulo-2.aula4)
+(ns curso.modulo-2.aula4
+  (:require
+   [curso.mock_database :as db]))
 
 (println "====== Desafio: Sistema de Ranking de Produtos ======")
 
-(def produtos [{:nome "Notebook" :preco 2500 :avaliacao 4.5 :vendas 100}
-               {:nome "Mouse" :preco 50 :avaliacao 4.8 :vendas 500}
-               {:nome "Teclado" :preco 100 :avaliacao 4.2 :vendas 200}
-               {:nome "Monitor" :preco 800 :avaliacao 4.7 :vendas 150}])
+(def produtos db/produtos)
 
 (defn ranking-por-preco [produtos]
   (sort-by :preco > produtos))

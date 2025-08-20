@@ -30,3 +30,13 @@
   {:contas {:conta1 {:numero "001" :titular "João" :saldo 1000 :tipo "corrente"}
             :conta2 {:numero "002" :titular "Maria" :saldo 2500 :tipo "poupanca"}
             :conta3 {:numero "003" :titular "Pedro" :saldo 500 :tipo "corrente"}}})
+
+(def produtos [{:nome "Notebook" :preco 2500 :avaliacao 4.5 :vendas 100}
+               {:nome "Mouse" :preco 50 :avaliacao 4.8 :vendas 500}
+               {:nome "Teclado" :preco 100 :avaliacao 4.2 :vendas 200}
+               {:nome "Monitor" :preco 800 :avaliacao 4.7 :vendas 150}])
+
+(def dados [{:id 1 :valor 10 :ativo true}
+            {:id 2 :valor nil :ativo false}
+            {:id 3 :valor 25 :ativo true}
+            {:id 4 :valor 0 :ativo true}])
