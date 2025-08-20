@@ -1,9 +1,8 @@
-(ns curso.modulo-1.aula5)
+(ns curso.modulo-1.aula5
+  (:require
+   [curso.mock_database :as db]))
 
 (println "====== Desafio: Sistema de Cadastro de Alunos ======")
-
-(def alunos {:aluno1 {:nome "João" :idade 20 :curso "Matemática"}
-             :aluno2 {:nome "Maria" :idade 22 :curso "Física"}})
 
 (defn quantidade-alunos [alunos] (count alunos))
 
@@ -35,5 +34,5 @@
     (println "\n=== Buscar aluno 3 ===")
     (println (buscar-aluno :aluno3 alunos-atualizados))))
 
-(sistemas-cadastro-alunos alunos)
+(sistemas-cadastro-alunos db/alunos)
 
