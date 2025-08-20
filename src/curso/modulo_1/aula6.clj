@@ -1,11 +1,7 @@
-(ns curso.modulo-1.aula6)
+(ns curso.modulo-1.aula6
+  (:require [curso.mock_database :as db]))
 
 (println "====== Desafio: Sistema de Análise de Vendas ======")
-
-(def vendas [{:produto "Notebook" :preco 2500 :quantidade 2 :vendedor "João"}
-             {:produto "Mouse" :preco 50 :quantidade 10 :vendedor "Maria"}
-             {:produto "Teclado" :preco 100 :quantidade 5 :vendedor "João"}
-             {:produto "Monitor" :preco 800 :quantidade 1 :vendedor "Pedro"}])
 
 (defn extrair-info-venda [{:keys [produto preco quantidade vendedor]}]
   {:produto produto :valor-total (* preco quantidade) :vendedor vendedor})
@@ -38,4 +34,4 @@
     (println (str "Total de vendas: " (count vendas)))
     (println (str "Vendas caras: " (count vendas-filtradas)))))
 
-(processar-vendas vendas)
+(processar-vendas db/vendas)

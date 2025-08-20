@@ -1,5 +1,6 @@
-(ns curso.modulo-2.aula2)
-(def numeros [1 2 3 4 5 6 7 8 9 10])
+(ns curso.modulo-2.aula2
+  (:require
+   [curso.mock_database :as db]))
 
 (defn somar-lista-com-reduce [numeros] (reduce + numeros))
 
@@ -13,8 +14,8 @@
        total-atual))))
 
 (println "====== Desafio: Calculadora com Reduce e Loop ======")
-(println "Soma com reduce:" (somar-lista-com-reduce numeros))
-(println "Soma sem reduce:" (somar-lista-sem-reduce numeros))
+(println "Soma com reduce:" (somar-lista-com-reduce db/numeros-aula2))
+(println "Soma sem reduce:" (somar-lista-sem-reduce db/numeros-aula2))
 
 
 

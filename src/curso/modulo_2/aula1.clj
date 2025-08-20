@@ -1,8 +1,7 @@
-(ns curso.modulo-2.aula1)
+(ns curso.modulo-2.aula1
+  (:require [curso.mock_database :as db]))
 
 (println "====== Desafio: Calculadora Recursiva - Soma de Lista ======")
-
-(def numeros [10 20 30 40 50])
 
 (defn processar-lista-recursivo [lista valor-inicial funcao-processamento]
   (loop [lista-atual lista
@@ -26,9 +25,9 @@
 (defn dobrar-numeros [lista]
   (map #(* 2 %) lista))
 
-(println "Lista original:" numeros)
-(println "Soma usando recur:" (somar-lista-recur numeros))
-(println "Maior número:" (buscar-maior-numero numeros))
-(println "Quantidade de pares:" (contar-pares numeros))
-(println "Dobro dos números:" (dobrar-numeros numeros))
+(println "Lista original:" db/numeros-aula1)
+(println "Soma usando recur:" (somar-lista-recur db/numeros-aula1))
+(println "Maior número:" (buscar-maior-numero db/numeros-aula1))
+(println "Quantidade de pares:" (contar-pares db/numeros-aula1))
+(println "Dobro dos números:" (dobrar-numeros db/numeros-aula1))
  
