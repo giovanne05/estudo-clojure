@@ -13,10 +13,10 @@
    :preco (s/constrained s/Num pos?)})
 
 (s/defschema PedidoSchema
-  {:id (s/constrained s/Int numero-positivo?)
+  {:id (s/constrained s/Int pos?)
    :cliente Cliente
    :itens [Item]
-   :total (s/constrained s/Num numero-positivo?)
+   :total (s/constrained s/Num pos?)
    :status (s/enum "pendente" "aprovado" "cancelado")
    :observacoes (s/maybe s/Str)})
 
