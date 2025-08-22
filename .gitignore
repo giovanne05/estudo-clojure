@@ -10,6 +10,7 @@ pom.xml
 pom.xml.asc
 *.jar
 *.class
+clj-kondo/.cache/
 
 # IDE
 .idea/
