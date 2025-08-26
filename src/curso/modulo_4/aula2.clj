@@ -17,7 +17,7 @@
     (throw (ex-info "Fila vazia" {:fila @fila-banco}))))
 
 (defn mostrar-estado-fila []
-  (println "Quantidade de clientes na fila:" (count @fila-banco))
+  (println "Quantidade do banco:" (count @fila-banco))
   (println "Limite de clientes na fila:" limite))
 
 (defn simular-cliente [cliente operacao]
