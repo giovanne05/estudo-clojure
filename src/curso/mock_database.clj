@@ -40,3 +40,7 @@
             {:id 2 :valor nil :ativo false}
             {:id 3 :valor 25 :ativo true}
             {:id 4 :valor 0 :ativo true}])
+(def cliente-banco {:id "número único"
+                    :nome "nome do cliente"
+                    :tipo "pessoa física ou jurídica"
+                    :prioridade "normal ou preferencial"})
