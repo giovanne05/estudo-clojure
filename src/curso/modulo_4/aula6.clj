@@ -43,7 +43,7 @@
 
 (defn processar-pedido-assincrono [produto quantidade]
   (future
-    (Thread/sleep 1000) ; Simulando processamento
+    (Thread/sleep 1000) ; 
     (dosync
      (let [produto-dados (get @estoque produto)]
        (if (and produto-dados (>= (:quantidade produto-dados) quantidade))
@@ -58,7 +58,7 @@
 (defn aguardar-pedidos [futures]
   (println "Aguardando processamento de pedidos...")
   (doseq [fut futures]
-    (let [resultado @fut] ; @fut aguarda o resultado do future
+    (let [resultado @fut] ; 
       (println "Future concluído:" resultado))))
 
 (defn aplicar-desconto-geral [percentual]
@@ -76,7 +76,7 @@
       (println (format "  %s: %s - %d unidades" id-produto (:nome dados) (:quantidade dados))))))
 
 (defn calcular-valor-total-estoque []
-  (let [valor-total (reduce + (for [[id-produto dados] @estoque]
+  (let [valor-total (reduce + (for [[_ dados] @estoque]
                                 (* (:quantidade dados) (:preco dados))))]
     (println (format "Valor total do estoque: R$ %.2f" valor-total))
     valor-total))
